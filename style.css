@@ -1,0 +1,695 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ecf0f1;
+}
+
+nav {
+    background: #34495e;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
+}
+
+section {
+    padding: 2rem;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #1abc9c;
+    display: inline-block;
+}
+
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+/* Assurez-vous que le body et le html occupent toute la hauteur */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Permet au contenu de prendre tout l'espace disponible */
+main {
+    flex: 1;
+}
+
+/* Fixe le footer en bas de l'écran */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+/* Style du conteneur principal des projets */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Style de chaque carte de projet */
+.project-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Images des projets */
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Bouton voir projet */
+.btn {
+    display: inline-block;
+    background-color: #0077b5;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #005a8e;
+}
+
+/* Titre principal */
+.title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+.cv-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.cv-buttons .btn {
+    display: inline-block;
+    background-color: #0077b5;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cv-buttons .btn:hover {
+    background-color: #005a8e;
+}
+.linkedin-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0077b5;
+    color: white;
+    padding: 8px 15px; /* Réduction de la taille */
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: fit-content; /* Ajuste la largeur au contenu */
+    max-width: 200px; /* Limite la largeur */
+}
+
+.linkedin-button:hover {
+    background-color: #005a8e;
+}
+
+.linkedin-button img {
+    width: 18px; /* Réduction de la taille de l'icône */
+    margin-right: 8px;
+}
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style des cartes */
+.skill-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Icônes */
+.skill-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Texte */
+.skill-card p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+/* Texte d'introduction */
+.intro-text {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 10px auto 20px;
+}
+
+/* Style des titres */
+.title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 40px;
+}
+
+/* Liste des langues */
+.languages {
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0;
+    color: #333;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    gap: 20px; /* Espacement entre les langues */
+    flex-wrap: wrap;
+}
+
+/* Assure un bon affichage des langues */
+.languages li {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espace entre le drapeau et le texte */
+    background: #f8f8f8;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+.hobby-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.hobby {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    gap: 15px;
+}
+
+.hobby img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.hobby-text {
+    flex: 1;
+}
+.hobby-text h2 {
+    color: #bcc8ef;
+}
+
+
+.hobby h3 {
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+    .hobby {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hobby img {
+        width: 100%;
+        height: auto;
+    }
+}
+/* Section avec image en fond */
+.hobby-banner {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Grande hauteur pour un effet immersif */
+    background: url("images/sport2.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Texte en surimpression */
+.hobby-text {
+    background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.hobby-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hobby-text p {
+    font-size: 1.2rem;
+}
+
+
+
+/* Deuxième section avec l'image de foot */
+.foot {
+    background: url("images/foot.jpg") no-repeat center center/cover;
+}
+
+@media (max-width: 768px) {
+    .hobby-banner {
+        height: 50vh;
+    }
+
+    .hobby-text {
+        padding: 15px;
+        max-width: 80%;
+    }
+
+    .hobby-text h2 {
+        font-size: 2rem;
+    }
+
+    .hobby-text p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Troisieme section avec l'image des séries */
+.series {
+    background: url("images/series.jpg") no-repeat center center/cover;
+}
+
+@media (max-width: 768px) {
+    .hobby-banner {
+        height: 50vh;
+    }
+
+    .hobby-text {
+        padding: 15px;
+        max-width: 80%;
+    }
+
+    .hobby-text h2 {
+        font-size: 2rem;
+    }
+
+    .hobby-text p {
+        font-size: 1rem;
+    }
+}
+/* Section profil centrée */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image profil bien alignée */
+.profile-img {
+    width: 120px; /* Ajustable */
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Titre bien centré et stylisé */
+.profile-section h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Texte bien centré et lisible */
+.profile-section p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 500px;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .profile-section {
+        max-width: 90%;
+        padding: 20px;
+    }
+    
+    .profile-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .profile-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Conteneur de la section expérience */
+.experience-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+}
+
+/* Image d'expérience */
+.experience-img {
+    width: 250px; /* Ajustable */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Texte */
+.experience-text {
+    flex: 1;
+}
+
+.experience-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.experience-text p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .experience-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .experience-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Style de la pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+.popup-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+.popup-sequence {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.popup-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 200px; /* Ajustez la hauteur maximale selon vos besoins */
+}
+
+.popup-sequence p {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Style spécifique pour la deuxième pop-up (si nécessaire) */
+#popup2 .popup-content {
+    max-width: 800px; /* Par exemple, une pop-up plus large */
+}
+
+/* Style de la section globale */
+.education-section {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre principal */
+.education-section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Conteneur de l'éducation */
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Alignement de chaque élément */
+.education-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    gap: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Image de chaque école */
+.education-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* Texte de formation */
+.education-text {
+    flex: 1;
+}
+
+.education-text h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .education-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .education-item img {
+        width: 80px;
+        height: 80px;
+    }
+}

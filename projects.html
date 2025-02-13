@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mes Projets</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projects.html">Projets</a></li>
+                <li><a href="experience.html">Expérience</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2> </h2>
+        <p class="subtitle">Une sélection de mes travaux en développement web, applications et logiciels.</p>
+
+        <section class="projects-container">
+            <div class="project-card">
+                <img src="images/project1.png" alt="Projet Jeux Olympiques">
+                <h3>Développement d'une application web pour les Jeux Olympiques</h3>
+                <p>Application web en Java avec MVC et gestion du temps.</p>
+                
+            </div>
+
+            <div class="project-card">
+                <img src="images/project2.png" alt="Projet BDD">
+                <h3>Conception d'une base de données "L'Attaque des Titans"</h3>
+                <p>Base de données conçue en SQL et PL/SQL.</p>
+                
+            </div>
+
+            <div class="project-card">
+                <img src="images/project3.png" alt="Projet E-commerce">
+                <h3>Développement d'un site e-commerce</h3>
+                <p>Site de vente en ligne réalisé en HTML et CSS.</p>
+                
+            </div>
+
+            <div class="project-card">
+                <img src="images/project4.png" alt="Projet Réseau">
+                <h3>Implémentation d'une solution réseau</h3>
+                <p>Connexion de machines virtuelles avec routage et DHCP.</p>
+                
+            </div>
+
+            <div class="project-card">
+                <img src="images/project5.png" alt="Projet Dévellopement d'Application">
+                <h3>Groupe de democratie participative</h3>
+                <p>Création d'une application en utilisant php, json, css, java, API.</p>
+                
+            </div>
+
+            <div class="project-card">
+                <img src="images/project6.png" alt="Conception d'une carte 3D">
+                <h3>Conception d'une carte 3D</h3>
+                <p>Schema proteus plan sur circuit imprimé modelisation de la carte en 3D.</p>
+               
+
+            </div>
+
+        </section>
+    </main>
+    
+
+    <footer>
+        <p>© 2025 Makni Amir - Tous droits réservés</p>
+    </footer>
+    <!-- Pop-up -->
+<div id="popup1" class="popup">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <div class="popup-sequence">
+            <!-- Le contenu sera injecté ici par JavaScript -->
+        </div>
+    </div>
+</div>
+
+<!-- Nouvelle pop-up -->
+<div id="popup2" class="popup">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <div class="popup-sequence">
+            <!-- Le contenu sera injecté ici par JavaScript -->
+        </div>
+    </div>
+</div>
+<script>
+    // Sélectionnez tous les boutons "Plus d'information"
+    const infoButtons = document.querySelectorAll('.btn');
+
+    // Ajoutez un écouteur d'événement à chaque bouton
+    infoButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // Récupérez l'ID de la pop-up cible
+            const popupId = button.getAttribute('data-popup');
+            const popup = document.getElementById(popupId);
+            const popupContent = popup.querySelector('.popup-content');
+
+            // Récupérez les données de l'attribut data-content
+            const content = JSON.parse(button.getAttribute('data-content'));
+
+            // Créez un conteneur pour les images et les textes dans la pop-up
+            let contentHTML = '';
+            content.forEach(item => {
+                contentHTML += `
+                    <img src="${item.image}" alt="Popup Image" class="popup-image">
+                    <p>${item.text}</p>
+                `;
+            });
+
+            // Mettez à jour le contenu de la pop-up
+            popupContent.innerHTML = `
+                <span class="close-btn">&times;</span>
+                <div class="popup-sequence">${contentHTML}</div>
+            `;
+
+            // Affichez la pop-up
+            popup.style.display = 'flex';
+
+            // Ajoutez un écouteur d'événement pour le bouton de fermeture
+            const newCloseBtn = popupContent.querySelector('.close-btn');
+            newCloseBtn.addEventListener('click', () => {
+                popup.style.display = 'none';
+            });
+        });
+    });
+
+    // Fermez la pop-up si l'utilisateur clique en dehors de la pop-up
+    window.addEventListener('click', (e) => {
+        document.querySelectorAll('.popup').forEach(popup => {
+            if (e.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    });
+</script>
+</body>
+</html>
